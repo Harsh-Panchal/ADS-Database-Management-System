@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>WebUni - Education Template</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="WebUni Education Template">
+	<meta name="keywords" content="webuni, education, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->   
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+
+
+	<style>
+		.card {
+		  box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.5);	
+		  border: 5% solid white; 
+		  transition: 0.1s;
+		  width:100%;
+		  height:100%;
+		  margin:1%;
+		  background: #d82a4e;
+		  padding:1% 20% 1% 20%;
+		}
+
+		.card:hover {
+		  box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.5);
+		}
+
+		.column {
+		  float: right;
+		  width: 30%;
+		  margin: 0% 10% 0% 0%;
+		 }
+	
+		input,number, date, select{
+			height: 40px;
+			padding:1% 2% 1% 2% ;
+			margin-bottom: 8px;
+			float: left;
+			margin-right: 10px;
+			border: none;
+			font-size: 100%;
+			font-weight: 500;
+			background: rgba(63, 66, 66, 0.01);
+			color: #fff;
+		}
+		input:focus{
+			border-bottom: 2px solid #d82a4e;
+		}
+
+		::placeholder {
+			color: rgb(182, 182, 184);
+			opacity: 1; 
+		}
+
+		table{
+			width:100%;
+		}
+		td, th {
+			text-align: center;
+			padding: 12px;
+			color: #fff;
+		}
+		.a1{
+			width:10%;
+		}
+		.a2{
+			width:60%;
+		}
+		.a3{
+			width:15%;
+		}
+		.a4{
+			width:15%;
+		}
+		a{
+			color: #fff;
+		}
+		a:hover{
+			color: #fff;
+		}
+		.only tr:nth-child(odd) {
+			background-color: rgba(184, 183, 183, 0.2);
+		}
+
+		
+		.but_on{	
+			box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+			border-radius: 7%;
+			background: #d82a4e;
+		}
+		.but_on:hover{
+			box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.5);
+		}
+		.but_pad{
+			padding:8px 3% 8px 3%;
+		}
+	</style>
+
+</head>
+<body class="bgcover" background="img/bg.jpg">
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+
+
+	<!-- Hero section -->
+
+<section class="hero-section set-bg"  style="padding-top: 60px">
+	<div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-2">
+                <!--<div class="site-logo">
+                    <img src="img/logo.png" alt="">
+                </div>-->
+                
+            </div>
+            <div class="col-lg-8 col-md-8">
+                <nav class="main-menu">
+                    <ul>
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/student">Student</a></li>
+                        <li><a href="/teacher">Teacher</a></li>
+                        <li><a href="/subject">Subject</a></li>
+                        <li><a href="/examInfo">Exam</a></li>
+                        <li><a href="/studentResult">Result</a></li>
+                        <li><a href="/login/logout"><button type="button" class="btn btn-danger btn-sm">LOGOUT</button></a></li>
+
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+	</div>
+	
+    <div class="container" style="margin-top: 8%;">
+        <a href="student_entry_form.html" style="float:right; " >
+            <button type="button" class="btn btn-danger btn-md" >
+                + Add Teacher
+        </button>
+        </a>
+    </div>
+    
+	<div class="container" style="margin-top: 16%;">
+		
+		<div class="row">
+			<input type="text" class="form-control col" name="surname" placeholder="SurName">
+			<input type="text" class="form-control col" name="first_name" placeholder="First_Name">
+			<input type="text" class="form-control col" name="father_name" placeholder="Father_Name">
+			<input type="number"  class="form-control col" name="adhar_no"  placeholder="Adhar_no" onkeyup="aadharnumber()" id="aadhar">	
+			<input type="number" class="form-control col" name="id"   placeholder="Unique Id">
+		</div>
+	
+		<div class="row">
+			<input type="date" title="Enter yout BirthDate" class="form-control col" style="color: rgba(40, 40, 41, 0.92);" name="birth_date">
+			<input type="number" class="form-control col" name="contact"  onkeyup="phonenumber()" id="phone" pattern="[1-9]{1}[0-9]{9}" placeholder="Contect">
+			<select name="gender" class="form-control col-1" style="color: rgba(40, 40, 41, 0.92);" >
+				<option value="male">Male</option>
+				<option value="female" >Female</option>
+			</select>
+			<select name="CAST" class="form-control col" style="color: rgba(40, 40, 41, 0.92);">
+				<option value="GENERAL">GENERAL</option>
+				<option value="OBC">OBC</option>
+				<option value="SC">SC</option>
+				<option value="ST">ST</option>
+			</select>
+			<select name="qualification" class="form-control col" style="color: rgba(40, 40, 41, 0.92);">
+					<option value="" disabled selected>Qualification</option>
+					<option value="PTC">PTC</option>
+					<option value="B.Sc.">B.Sc.</option>
+					<option value="B.A.">B.A.</option>
+					<option value="B.Com.">B.Com.</option>
+					<option value="Other">Other</option>
+				</select>
+				<select name="permission" class="form-control col" style="color: rgba(40, 40, 41, 0.92);">
+					<option value="" disabled selected>permission</option>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</select>	
+		</div>
+			
+		<a href="#" class="row"><button type="button" class="btn btn-danger btn-md col-12">Search</button></a>
+		
+	</div>
+
+	<div class="container" >
+			<table class="table-hover text-white" style="margin-top: 5%;">
+				<thead>
+					<tr>
+					<th  class="a1">ID</th>
+					<th  class="a2">NAME</th>
+					
+				</tr>
+				</thead>
+				<tbody class="only">
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td class="but_pad"><a href="#"><div class="btn btn-danger btn-md">View</div></a></td>
+					<td class="but_pad"><a href="#"><div class="btn btn-danger btn-md">Edit</div></a></td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>6</td>
+					<td class="but_pad"><a href="#"><div class="btn btn-danger btn-md">View</div></a></td>
+					<td class="but_pad"><a href="#"><div class="btn btn-danger btn-md">Edit</div></a></td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>10</td>
+					<td class="but_pad"><a href="#"><div class="btn btn-danger btn-md">View</div></a></td>
+					<td class="but_pad"><a href="#"><div class="btn btn-danger btn-md">Edit</div></a></td>
+				</tr>
+			</tbody>
+			</table>
+	</div>
+	
+</section>
+
+	
+	<!-- Hero section end -->
+
+	
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/mixitup.min.js"></script>
+	<script src="js/circle-progress.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

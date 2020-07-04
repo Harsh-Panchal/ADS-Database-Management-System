@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>WebUni - Education Template</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="WebUni Education Template">
+	<meta name="keywords" content="webuni, education, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->   
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+
+
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body class="bgcover" background="img/bg.jpg">
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+
+
+	<!-- Hero section -->
+
+<section class="hero-section set-bg"  style="padding-top: 60px">
+	<div class="container">
+		<div class="row">
+				<div class="col-lg-3 col-md-3">
+					<div class="site-logo">
+						<img src="img/logo.png" alt="">
+					</div>
+					<div class="nav-switch">
+						<i class="fa fa-bars"></i>
+					</div>
+				</div>
+				<div class="col-lg-9 col-md-9">
+					<nav class="main-menu">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="#">About us</a></li>
+							<li><a href="courses.html">Courses</a></li>
+							<li><a href="blog.html">News</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+	</div>
+
+<div class="col-lg-10"  style=" margin: auto;">
+	<div class="contact-form-warp" >
+		<div class="section-title text-white text-left">
+			<h2>TEACHER</h2>
+			<p>Enter the teacher details for pushing the data in database.</p>
+		</div>
+	<form class="contact-form">
+		<div><table style="width:100%"><tr><td style="width:33%">Surname</td><td style="width:33%">First Name</td><td style="width:33%">Father Name</td><tr></table></div>
+		<div><div><input type="text" name="surname" style="width:33%; border-right:4px solid white;" ></div><div><input type="text" name="first_name" style="width:33%; border-right:4px solid white;"></div><div><input type="text" name="father_name" style="width:33%; border-right:4px solid white;"></div></div>
+		
+		<div><div>Aadhar Number</div><div><input type="number" name="adhar_no" onkeyup="aadharnumber()" id="aadhar"></div></div>
+		
+		<div><table style="width:100%"><tr><td style="width:50%">Qualification</td><td style="width:50%">Post</td></tr></table></div>
+		<div><div><select name="qualification" style="width:50%; border-right:4px solid white;">
+				<option value="PTC">PTC</option>
+				<option value="B.Sc.">B.Sc.</option>
+				<option value="B.A.">B.A.</option>
+				<option value="B.Com.">B.Com.</option>
+				<option value="Other">Other</option>
+		</select></div><div><select name="post" style="width:50%; border-right:4px solid white;">
+				<option value="Teacher">Teacher</option>
+				<option value="Principal">Principal</option>
+		</select></div></div>
+				
+		<div><table><tr><td style="width:380px">Gender</td><td style="width:33%">Religion</td><td style="width:33%">Cast</td><tr></table></div>
+		<div><div><select name="gender" style="width:33%; border-right:4px solid white;">
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+		</select></div><div><input type="text" name="religion" style="width:33%; border-right:4px solid white;"></div><div><select name="CAST" style="width:33%; border-right:4px solid white;">
+				<option value="GENERAL">GENERAL</option><option value="OBC">OBC</option><option value="SC">SC</option><option value="ST">ST</option>
+		</select></div></div>
+					
+		<div><div>Address</div><div><input type="text" name="address" ></div></div>
+		
+		<div><table style="width:100%"><tr><td style="width:50%">pincode</td><td style="width:50%">Birth Date</td></tr></table></div>
+		<div><div><input type="number" name="pincode" onkeyup="pinnumber()" id="pin" pattern="[1-9]{1}[0-9]{5}"style="width:50%; border-right:4px solid white;"></div><div><input type="date" name="birth_date" style="width:50%; border-right:4px solid white;"></div></div>
+										
+		<div><table style="width:100%"><tr><td style="width:50%">Contact</td><td style="width:50%">Email Address</td></tr></table></div>
+		<div><div><input type="number" name="contact" onkeyup="phonenumber()" id="phone" pattern="[1-9]{1}[0-9]{9}" style="width:50%; border-right:4px solid white;"></div><div><input type="email" name="email" style="width:50%; border-right:4px solid white;"></div></div>
+						
+		<div><table style="width:100%"><tr><td style="width:50%">Joining Date</td><td style="width:50%">Permission</td></tr></table></div>
+		<div><div><input type="date" name="date_of_joining" style="width:50%; border-right:4px solid white;"></div><div><select name="permission" style="width:50%; border-right:4px solid white;">
+				<option value="true">Yes</option>
+				<option value="false">No</option>
+		</select></div></div>
+			
+		<button class="site-btn">ADD TEACHER</button>
+	</form>
+	</div>
+</div>
+</section>
+
+	
+	<!-- Hero section end -->
+
+	
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/mixitup.min.js"></script>
+	<script src="js/circle-progress.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
